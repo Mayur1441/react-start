@@ -1,0 +1,35 @@
+.landing {
+    width: 100%;
+    display: flex;
+}
+
+.landing a {
+    color: blue;
+}
+
+.HomeArticles {
+    width: 75%;
+    padding: 10px;
+}
+
+.HomeArticles .column {
+    text-align: justify;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.32);
+    width: 33%;
+    padding: 15px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.HomeArticles .column .title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.HomeArticles:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+

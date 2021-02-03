@@ -1,0 +1,25 @@
+.sidebar {
+    text-align: justify;
+    width: 25%;
+    padding: 10px;
+    border: black;
+    border-style: dashed;
+}
+
+.sidebar .column {
+    padding: 10px;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.32);
+    height: 180px;
+    border-bottom-style: dashed;
+}
+
+.sidebar .column img {
+    float: left;
+    padding: 0px 15px 0px 0px;
+}
+
+.sidebar .column .title {
+    font-size: medium;
+    font-weight: bold;
+}
