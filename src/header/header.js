@@ -1,13 +1,13 @@
 import "./header.css"
 
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import {BrowserRouter as Router, Link} from "react-router-dom";
 
 function AppHeader() {
     const menuBar = [
         {endpoint: '/', title: 'Home'},
-        {endpoint: '/news', title: 'News'},
-        {endpoint: '/opinion', title: 'Opinion'},
-        {endpoint: '/lifestyle', title: 'Lifestyle'},
+        {endpoint: '/category/news', title: 'News'},
+        {endpoint: '/category/opinion', title: 'Opinion'},
+        {endpoint: '/category/lifestyle', title: 'Lifestyle'},
 
     ];
     return (
@@ -19,7 +19,11 @@ function AppHeader() {
                             <tr>
                                 {menuBar.map((menuItem, index) => (
                                     <th>
-                                        <Link to={menuItem.endpoint} className="menu-iteam">
+                                        <Link
+                                            to={menuItem.endpoint}
+                                            className="menu-iteam"
+                                            key={index.toString()}
+                                        >
                                             {menuItem.title}
                                         </Link>
                                     </th>

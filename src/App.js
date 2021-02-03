@@ -4,6 +4,7 @@ import AppHeader from "./header/header";
 import AppLanding from "./landing/landing";
 import AppFooter from "./footer/footer";
 import Article from "./article/article";
+import AppCategory from "./category/category"
 
 import './index.css'
 
@@ -14,6 +15,9 @@ function App() {
                 <Switch>
                     <Route path="/article">
                         <ArticleFunction/>
+                    </Route>
+                    <Route path="/category">
+                        <CategoryFunction/>
                     </Route>
                     <Route path="/">
                         <Home/>
@@ -36,11 +40,25 @@ function Home() {
 
 function ArticleFunction() {
     let match = useRouteMatch();
+    console.log(match);
     return (
         <div>
             <Switch>
                 <Route path={`${match.path}/:articleSlug`}>
                     <Article/>
+                </Route>
+            </Switch>
+        </div>
+    );
+}
+
+function CategoryFunction() {
+    let match = useRouteMatch();
+    return (
+        <div>
+            <Switch>
+                <Route path={`${match.path}/:categorySlug`}>
+                    <AppCategory/>
                 </Route>
             </Switch>
         </div>
