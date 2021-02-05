@@ -1,10 +1,13 @@
-import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, useRouteMatch} from "react-router-dom";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AppHeader from "./header/header";
 import AppLanding from "./landing/landing";
 import AppFooter from "./footer/footer";
 import Article from "./article/article";
 import AppCategory from "./category/category"
+import NewArticle from "./new-article/newarticle"
 
 import './index.css'
 
@@ -13,6 +16,9 @@ function App() {
         <Router>
             <div>
                 <Switch>
+                    <Route path="/create">
+                        <CreateArticle/>
+                    </Route>
                     <Route path="/article">
                         <ArticleFunction/>
                     </Route>
@@ -40,7 +46,6 @@ function Home() {
 
 function ArticleFunction() {
     let match = useRouteMatch();
-    console.log(match);
     return (
         <div>
             <Switch>
@@ -63,6 +68,12 @@ function CategoryFunction() {
             </Switch>
         </div>
     );
+}
+
+function CreateArticle() {
+    return (
+        <NewArticle/>
+    )
 }
 
 export default App;

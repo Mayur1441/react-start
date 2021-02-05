@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Link} from "react-router-dom";
 function AppHeader() {
     const menuBar = [
         {endpoint: '/', title: 'Home'},
+        {endpoint: '/create', title: 'Creat Article'},
         {endpoint: '/category/news', title: 'News'},
         {endpoint: '/category/opinion', title: 'Opinion'},
         {endpoint: '/category/lifestyle', title: 'Lifestyle'},
